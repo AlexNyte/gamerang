@@ -4,6 +4,7 @@
 
 function Check() {
     $("#res").remove();
+    //-------------------------------------------Запись состояний чекбоксов-----------
     //Group 6+
     var a = document.getElementById('1').checked;
     var b = document.getElementById('2').checked;
@@ -26,7 +27,11 @@ function Check() {
     var r = document.getElementById('16').checked;
     var s = document.getElementById('17').checked;
 
+
+    //-------------------------------------------Проверка на пренадлежность к группе 6+-----------
+
     if (((a) || (b) || (c)) && (!d) && (!e) && (!f) && (!g) && (!h) && (!k) && (!j) && (!n) && (!m) && (!o) && (!p) && (!q) && (!r) && (!s)){
+        //-------------------------------------------Вывод результата-----------
         $("#result").append('<div class="p-y-3 section" id="res" draggable="true"> ' +
             '<div class="container"> ' +
             '<div class="row">' +
@@ -43,7 +48,10 @@ function Check() {
             '</div>' +
             '</div>');
     }
+
+    //-------------------------------------------Проверка на пренадлежность к группе 12+-----------
     else if (((d) || (e) || (f)) && (!g) && (!h) && (!k) && (!j) && (!n) && (!m) && (!o) && (!p) && (!q) && (!r) && (!s)){
+        //-------------------------------------------Вывод результата-----------
         $("#result").append('<div class="p-y-3 section" id="res" draggable="true"> ' +
             '<div class="container"> ' +
             '<div class="row">' +
@@ -60,7 +68,10 @@ function Check() {
             '</div>' +
             '</div>');
     }
+
+    //-------------------------------------------Проверка на пренадлежность к группе 16+-----------
     else if (((g) || (h) || (k) || (j) || (n)) && (!m) && (!o) && (!p) && (!q) && (!r) && (!s)){
+        //-------------------------------------------Вывод результата-----------
         $("#result").append('<div class="p-y-3 section" id="res" draggable="true"> ' +
             '<div class="container"> ' +
             '<div class="row">' +
@@ -77,7 +88,10 @@ function Check() {
             '</div>' +
             '</div>');
     }
+
+    //-------------------------------------------Проверка на пренадлежность к группе 18+-----------
     else if ((m) || (o) || (p) || (q) || (r) || (s)){
+        //-------------------------------------------Вывод результата-----------
         $("#result").append('<div class="p-y-3 section" id="res" draggable="true"> ' +
             '<div class="container"> ' +
             '<div class="row">' +
@@ -94,7 +108,10 @@ function Check() {
             '</div>' +
             '</div>');
     }
+
+    //-------------------------------------------Проверка на пренадлежность к группе 0+-----------
     else if ((!a) && (!b) && (!c) && (!d) && (!e) && (!f) && (!g) && (!h) && (!k) && (!j) && (!n) && (!m) && (!o) && (!p) && (!q) && (!r) && (!s)){
+        //-------------------------------------------Вывод результата-----------
         $("#result").append('<div class="p-y-3 section" id="res" draggable="true"> ' +
             '<div class="container"> ' +
             '<div class="row">' +
@@ -112,6 +129,7 @@ function Check() {
             '</div>');
     }
 
+    //-------------------------------------------Очистка чекбоксов-----------
     for (var z = 1; z < 18; z++){
         document.getElementById(z).checked = false;
     }
